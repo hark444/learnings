@@ -1,0 +1,10 @@
+on:
+  schedule:
+    - cron: '0 1 * * *'
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Every Day at 1
+        run: echo "Testing scheduled workflows"
