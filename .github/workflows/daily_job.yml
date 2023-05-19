@@ -1,7 +1,7 @@
 name: Daily Job
 on:
   schedule:
-    - cron: '* * * * *' # Executes at 1 PM UTC every day
+    - cron: '0 0 * * sun' # Executes at 1 PM UTC every day
 
 jobs:
   run-at-1pm:
@@ -13,4 +13,4 @@ jobs:
       # Add your desired steps here
       
       - name: Example Step
-        run: echo "This job runs daily at 1 PM UTC"
+        run: echo "This job runs every Sunday at 00:00 UTC"
