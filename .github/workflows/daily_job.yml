@@ -1,0 +1,16 @@
+name: Daily Job
+on:
+  schedule:
+    - cron: '40 07 * * *' # Executes at 1 PM UTC every day
+
+jobs:
+  run-at-1pm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      # Add your desired steps here
+      
+      - name: Example Step
+        run: echo "This job runs daily at 1 PM UTC"
